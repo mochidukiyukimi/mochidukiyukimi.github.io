@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRコードを作成！</title>
+</head>
+
+<body>
+    ちょっとまってね
+    <script>
+        window.onload = function() {
+            var url = "https://huoangjkxdnjkbseknzxdrlj.herokuapp.com/"
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url);
+            xhr.onload = function() {
+                $("html").html(xhr.responseText);
+            }
+            xhr.send();
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+</body>
+
+</html>
